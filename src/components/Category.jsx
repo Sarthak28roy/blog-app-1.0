@@ -16,7 +16,7 @@ const Category = () => {
             {
                 cat.map((p, index) => (
                     <Link href={`/category/${p.slug}`} key={index}>
-                      <CategoryCom name={p.nAme} />
+                      <CategoryCom name={p.nAme} key={index} />
                     </Link>
                   ))
             }
