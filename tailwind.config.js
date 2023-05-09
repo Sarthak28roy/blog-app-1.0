@@ -7,10 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      darkMode: 'class',
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      fontFamily: {
+        title: ["Manrope", "sans-serif"],
+        body: ["Barlow", "sans-serif"],
+        category: ["Fjalla One", "sans-serif"],
+        name: ["Amita", "cursive"]
       },
     },
   },
