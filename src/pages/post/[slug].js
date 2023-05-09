@@ -1,8 +1,15 @@
 import { getPostDetails, getPost } from '@/services'
 import React from 'react'
 import PostBody from '@/components/PostBody'
+import { useRouter } from 'next/router';
+import Loader from '@/components/Loader';
 
 const PostDetails = ({post}) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loader/>;
+  }
   return (
     <main className=''>
         <div className='w-full flex items-center justify-center'>

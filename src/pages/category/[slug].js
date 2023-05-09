@@ -4,7 +4,14 @@ import PostCard from '@/components/PostCard'
 import Navbar from '@/components/Navbar'
 import PostWidget from '@/components/PostWidget'
 import Category from '@/components/Category'
+import { useRouter } from 'next/router'
+import Loader from '@/components/Loader'
 const CatContent = ({posts}) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loader/>;
+  }
   return (
     <main className='bg-[#202125] w-full text-[#d3d3d3] min-h-screen'>
       <Navbar/>
