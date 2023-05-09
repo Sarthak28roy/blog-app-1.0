@@ -19,16 +19,16 @@ export default function Home({posts}) {
             <div className=' w-full flex items-center'>
               <div>
                 {
-                  posts.filter(post=> post.node.featuredPost===true).map(post=>(
-                    <FeaturedPost post={post.node}/>
+                  posts.filter((post, index)=> post.node.featuredPost===true).map(post=>(
+                    <FeaturedPost key={index} post={post.node}/>
                   ))
                 }
               </div>
             </div>
             <div className=' flex flex-col items-center md:grid md:grid-cols-2'>
               {
-                posts.filter(post=> post.node.featuredPost===false).map(array => (
-                  <PostCard post = {array.node}/>
+                posts.filter((post, index)=> post.node.featuredPost===false).map(array => (
+                  <PostCard key={index} post = {array.node}/>
                 ))
               }
             </div>

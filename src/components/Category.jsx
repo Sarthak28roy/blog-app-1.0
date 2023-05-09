@@ -13,9 +13,9 @@ const Category = () => {
         <h2 className='text-2xl font-category'>Categories</h2>
         <div className='mt-3 grid grid-cols-5 gap-2  h-36 max-h-72'>
             {
-                cat.map(sc=>(
+                cat.map((sc, index)=>(
                     <Link href={`/category/${sc.slug}`}>
-                        <span className='hover:bg-white/30 backdrop-blur-md rounded-sm text-semibold  
+                        <span key={index} className='hover:bg-white/30 backdrop-blur-md rounded-sm text-semibold  
                         p-1 px-2 opacity-75 hover:opacity-100 duration-150'>{sc.nAme}</span>
                     </Link>
                 ))

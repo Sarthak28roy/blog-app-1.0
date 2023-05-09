@@ -81,9 +81,9 @@ const PostBody = ({post}) => {
                 </div>
           </div>
           <div>{
-            post.categories.map(p=>(
+            post.categories.map((p, index)=>(
               <Link href={`/category/${p.slug}`}>
-                <p>#{p.nAme}</p>
+                <p key={index}>#{p.nAme}</p>
               </Link>
             ))
           }</div>
