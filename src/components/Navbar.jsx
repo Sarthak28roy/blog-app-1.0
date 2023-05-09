@@ -8,7 +8,7 @@ const Navbar = () => {
   
   return (
     <main className='w-full h-16 flex items-center justify-center'>
-        <Link href={`/`}><div><Image src={logo} height={50}/></div></Link>
+        <Link href={`/`}><div><Image src={logo} alt='Image' height={50}/></div></Link>
     </main>
   )
 }
