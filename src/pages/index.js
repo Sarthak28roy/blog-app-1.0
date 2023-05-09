@@ -5,7 +5,6 @@ import PostCard from '@/components/PostCard'
 import Navbar from '@/components/Navbar'
 import PostWidget from '@/components/PostWidget'
 import FeaturedPost from '@/components/FeaturedPost'
-import Category from '@/components/Category'
 import Footer from '@/components/Footer'
 
 export default function Home({posts}) {
@@ -34,7 +33,7 @@ export default function Home({posts}) {
             </div>
           </div>
           <div className=' sticky top-0 w-full lg:w-1/3 flex flex-col gap-5'>
-            <Category/>
+            <PostWidget/>
           </div>
         </div>
       </div>
