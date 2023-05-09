@@ -32,7 +32,7 @@ const PostWidget = ({categories, slug}) => {
                       <div className='flex items-center p-1 px-2 rounded-lg duration-75 justify-between my-2 h-20
                        hover:bg-gray-700'>
                           <div className='w-1/3 h-16 rounded-md overflow-hidden'>
-                            <Image width={400} height={400} className='w-28 rounded-md ' src={item.featuredImage.url} alt="" />
+                            <Image width={500} height={500} className='w-28 rounded-md ' src={item.featuredImage.url} alt="" />
                           </div>
                           <div className='w-2/3'>
                               <h2>{item.tittle}</h2>

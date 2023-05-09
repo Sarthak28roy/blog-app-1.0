@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getCategories } from '@/services'
 import Link from 'next/link';
-import CategoryCom from './CategoryCom';
 const Category = () => {
     const [cat, setCat] = useState([])
     useEffect(()=>{
@@ -16,7 +15,8 @@ const Category = () => {
             {
                 cat.map((p, index) => (
                     <Link href={`/category/${p.slug}`} key={index}>
-                      <CategoryCom name={p.nAme} key={index} />
+                      <span className='hover:bg-white/30 backdrop-blur-md rounded-sm text-semibold  
+    p-1 px-2 opacity-75 hover:opacity-100 duration-150'>{p.nAme}</span>
                     </Link>
                   ))
             }
