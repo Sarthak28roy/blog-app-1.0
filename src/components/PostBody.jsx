@@ -2,10 +2,10 @@ import React from 'react'
 import moment from 'moment/moment'
 import { FaRegCalendarAlt } from 'react-icons/fa';
 import PostWidget from './PostWidget';
-import Content from './Content';
 import Navbar from './Navbar';
 import Link from 'next/link';
 import Category from './Category';
+import Image from 'next/image';
 const PostBody = ({post}) => {
     const getContentFragment = (index, text, obj, type) => {
         let modifiedText = text;
@@ -33,10 +33,11 @@ const PostBody = ({post}) => {
             return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
           case 'image':
             return (
-              <img
+              <Image
                 key={index}
                 alt={obj.title}
-                
+                width={400}
+                height={600}
                 src={obj.src}
               />
             );
