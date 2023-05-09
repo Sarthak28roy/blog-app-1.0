@@ -12,8 +12,8 @@ const CatContent = ({posts}) => {
         <div className='w-full lg:w-5/6 flex items-center'>
           <div className=' w-full lg:w-2/3 grid-cols-1 lg:grid-cols-2'>
             {
-              posts.map(post=>(
-                <PostCard post={post.node}/>
+              posts.map((post, index)=>(
+                <PostCard post={post.node} key={index}/>
               ))
             }
           </div>
