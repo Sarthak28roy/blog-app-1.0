@@ -15,7 +15,7 @@ const Category = () => {
         <div className='mt-3 grid grid-cols-5 gap-2  h-36 max-h-72'>
             {
                 cat.map((p, index) => (
-                    <Link href={`/category/${p.slug}`} key={index}>
+                    <Link href={`/category/${p.slug}`} key={p.id}>
                       <CategoryCom name={p.nAme} key={index} />
                     </Link>
                   ))
